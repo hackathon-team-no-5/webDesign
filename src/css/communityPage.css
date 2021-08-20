@@ -207,6 +207,7 @@
 
 .communityBoard{
 	margin: 30px;
+	height: 790px;
 }
 
 .communityTitle{
@@ -222,6 +223,7 @@
 table{
 	border-collapse: collapse;
 	width: 100%;
+	margin-bottom: 50px;
 }
 
 .communityBoardTitle>tr>th{
@@ -237,17 +239,17 @@ table{
 	text-align: center;
 }
 
-.communityBoardContents>tr:hover{
-	cursor: pointer;
-	background-color: #f5f4f8;
-}
-
 .communityBoardContents>tr:hover td:nth-child(2){
 	color: #6748e4;
 }
 
 .communityBoardContents>tr{
 	border-bottom: 1px solid #d5d3da;
+}
+
+.communityBoardContents>tr:hover{
+	cursor: pointer;
+	background-color: #f5f4f8;
 }
 
 .communityBoardContents>tr>td{

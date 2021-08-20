@@ -63,7 +63,7 @@ header{ /* 상단 로고이미지*/
 	margin-top: 18.5px;
 	float:right;
 	height: 30px;
-	width: 441px;
+	width: 600px;
 }
 
 .topWrap>ul>li{
@@ -73,7 +73,7 @@ header{ /* 상단 로고이미지*/
 	text-transform: uppercase;
 }
 
-.topWrap>ul>li:nth-child(5){
+.topWrap>ul>li:nth-child(6){
 	margin-right:0;
 }
 
