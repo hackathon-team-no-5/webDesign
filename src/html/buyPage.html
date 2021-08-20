@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/topBar.css">
     <link rel="stylesheet" href="../css/itemCard.css">
     <link rel="stylesheet" href="../css/pageNum.css">
+    <script type="text/JavaScript" src="../js/buyPage.js"></script>
     <title>WebDesign</title>
     <!--iframe 자동 사이즈 조절 script-->
     <!-- <script language="JavaScript">
@@ -73,11 +74,12 @@
                         
                     </div> --> <!--dropdown 시도...ㅠㅠ-->
                     <div class="category">
-                        <ul>
-                            <li><a class="categoryChoose">👉고가 물품</a></li>
-                            <li><a class="categoryChoose">👉NFT</a></li>
-                            <li><a class="categoryChoose">👉지역별</a></li>
-                        </ul>
+                        <input type="radio" class="categoryChoose" id="highQuality" name="category" value="highQuality"/>
+                        <label class="categoryChooseLabel" for="highQuality">👉고가 물품</label>
+                        <input type="radio" class="categoryChoose" id="nft" name="category" value="nft"/>
+                        <label class="categoryChooseLabel" for="nft">👉NFT</label>
+                        <input type="radio" class="categoryChoose" id="byArea" name="category" value="byArea"/>
+                        <label class="categoryChooseLabel" for="byArea">👉지역별</label>
                     </div>
                 </div>
             </div>
@@ -104,54 +106,7 @@
                         </ul>
                     </div>
                 </div>
-
-            <!-- <script> 스크립트 더 수정
-                var titleText = document.getElementsByClassName("textBundleTitle")[0];
-                var categoryChoose = document.getElementsByClassName("categoryChoose")[0];
-                var categoryChoose2 = document.getElementsByClassName("categoryChoose")[1];
-                
-                function categoryChoose1(){
-                    document.getElementsByClassName("textBundleTitle")[0].innerHTML = "💜고가 물품💜";
-                    document.getElementsByClassName("luxuryTypeList")[0].style.display="block";
-                }
-                
-                function categoryChoose2(){
-                    document.getElementsByClassName("textBundleTitle")[0].innerHTML = "💜NFT💜";
-                    document.getElementsByClassName("cardBundle")[0].style.marginTop = "10px";
-                    document.getElementsByClassName("luxuryTypeList")[0].style.display="none";
-                }
-
-                categoryChoose.onclick= categoryChoose1();
-                categoryChoose2.onclick= categoryChoose2();
-
-                var url = new URL(location.href);
-                var param = url.searchParams.get("c");
-        
-                switch(param) {
-                    case "a" :
-                        categoryChoose1();
-                        break;
-                    case "b" :
-                        categoryChoose2();
-                        break;
-                }
-
-
-                function categoryChange(){
-                if(titleText = "💜고가 물품💜"){
-                    categoryChoose.style.fontWeight="bold";
-                    categoryChoose.style.color="#8566FF"
-                } else{
-                    categoryChoose2.style.fontWeight="bold";
-                    categoryChoose2.style.color="#8566FF"
-                }
-                window.onload=categoryChange();
-            }
-           
-            </script> -->
-                
-        
-                <!--스크롤 시 목록 계속 로딩되게...-->
+             
                 <div class="cardBundle">
                     <div class="itemCard">
                         <!-- <a href="">구매하기</button> -->

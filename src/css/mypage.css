@@ -37,8 +37,17 @@ body, html{
 
 /*마이페이지*/
 
+.title{
+    font-size : 50px;
+    font-weight: bold;
+    color: snow;
+    z-index: 3;
+    margin-top: 180px;
+    font-family: myfont;
+}
+
 .mypageWrap{
-	margin: 170px 0px 50px 0;
+	margin: 10px 0px 50px 0;
     background-color: white;
     border-radius: 5px;
     height:900px;
@@ -68,19 +77,16 @@ body, html{
     margin-top: 20px;
 }
 
-.myProfileInfo>span:nth-child(1){
+.myProfileInfo>span:nth-child(2){/*이름*/
     font-size: 18px;
+    font-weight: bold;
 }
 
-.myProfileInfo>span:nth-child(2){
+.myProfileInfo>span:nth-child(3){/*아이디*/
     color: #aaa;
 }
 
-.myProfileInfo>span:nth-child(4){
-    padding-top: 10px;
-}
-
-.myProfileInfo>a{
+.myProfileInfo>a{/*내정보수정*/
     color: #8566FF;
 }
 
@@ -200,7 +206,7 @@ body, html{
 }
 
 .myBuyConfirmItem>img{ /*구매확정 아이템 이미지*/
-    width: 100px; height:100px;
+    width: 80px; height:80px;
     border-radius: 100px;
     border: 3px solid #d8d3da;
 }
@@ -208,6 +214,9 @@ body, html{
 .myBuyConfirmItemText{ /*구매확정 아이템 텍스트*/
     width: 390px;
     padding-left: 10px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
 }
 
 .myBuyConfirmItemText>span:nth-child(1), .myBuyConfirmItemText>span:nth-child(5), .myBuyConfirmItemText>span:nth-child(7){ /*제목 폰트 굵게*/
