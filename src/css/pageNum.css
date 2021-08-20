@@ -7,7 +7,6 @@ a{
 
 /*페이지 넘기기*/
 .pageWrap{
-	margin-top: 60px;
 	font-size: 17px;
 }
 
@@ -15,9 +14,14 @@ a{
     margin: 0 auto;
 	width: 420px;
 	height: 20px;
+	margin-bottom: 100px;
 	list-style: none;
 }
 .page>li{
 	float:left;
 	margin: 0 10px 0 10px;
+}
+
+.page>li:hover{
+	text-decoration-line: underline;
 }

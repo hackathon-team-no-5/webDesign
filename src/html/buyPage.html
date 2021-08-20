@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/buyPage.css">
     <link rel="stylesheet" href="../css/topBar.css">
+    <link rel="stylesheet" href="../css/itemCard.css">
+    <link rel="stylesheet" href="../css/pageNum.css">
     <title>WebDesign</title>
-
     <!--iframe 자동 사이즈 조절 script-->
     <!-- <script language="JavaScript">
     function autoResize(obj){ 
@@ -72,56 +73,235 @@
                     </div> --> <!--dropdown 시도...ㅠㅠ-->
                     <div class="category">
                         <ul>
-                            <li><a class="categoryChoose" href="../html/luxuryItem.html" target="iframe">👉고가 물품</a></li>
-                            <li><a class="categoryChoose" href="../html/nftItem.html" target="iframe">👉NFT</a></li>
-                            <li><a class="categoryChoose" href="">👉지역별</a></li>
+                            <li><a class="categoryChoose">👉고가 물품</a></li>
+                            <li><a class="categoryChoose">👉NFT</a></li>
+                            <li><a class="categoryChoose">👉지역별</a></li>
                         </ul>
                     </div>
                 </div>
-                    
             </div>
-
-            <!--배경 이미지-->
-            <!-- <img class="mainImg" src="mainimg.png"> -->
 
             <!--iframe-->
-            <div class="iframe">
+            <!-- <div class="iframe">
                 <iframe id="iframe" name="iframe" onload="autoResize(this)" onchange="listChoose()" frameborder="0" src="../html/luxuryItem.html"></iframe>
-            </div>
+            </div> -->
 
             <!--홈화면 카테고리 src-->
-            <script>
+
+            <div class="ItemWrap">
+                <div class="textBundle">
+                    <span class="textBundleTitle">💜고가 물품💜</span>
+                    <span class="textBundleSubtitle">이 상품은 어떠신가요?</span>
+                    <div class="luxuryTypeList">
+                        <ul>
+                            <li><button>가방</button></li>
+                            <li><button>지갑</button></li>
+                            <li><button>시계</button></li>
+                            <li><button>신발</button></li>
+                            <li><button>악세사리</button></li>
+                            <li><button>기타</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- <script> 스크립트 더 수정
+                var titleText = document.getElementsByClassName("textBundleTitle")[0];
+                var categoryChoose = document.getElementsByClassName("categoryChoose")[0];
+                var categoryChoose2 = document.getElementsByClassName("categoryChoose")[1];
+                
+                function categoryChoose1(){
+                    document.getElementsByClassName("textBundleTitle")[0].innerHTML = "💜고가 물품💜";
+                    document.getElementsByClassName("luxuryTypeList")[0].style.display="block";
+                }
+                
+                function categoryChoose2(){
+                    document.getElementsByClassName("textBundleTitle")[0].innerHTML = "💜NFT💜";
+                    document.getElementsByClassName("cardBundle")[0].style.marginTop = "10px";
+                    document.getElementsByClassName("luxuryTypeList")[0].style.display="none";
+                }
+
+                categoryChoose.onclick= categoryChoose1();
+                categoryChoose2.onclick= categoryChoose2();
+
                 var url = new URL(location.href);
                 var param = url.searchParams.get("c");
         
-                var iframe = document.getElementById("iframe");
-
-                var luxury = document.getElementsByClassName("categoryChoose")[0].style;
-                var nft = document.getElementsByClassName("categoryChoose")[1].style;
-                var area = document.getElementsByClassName("categoryChoose")[2].style;
-        
                 switch(param) {
                     case "a" :
-                        iframe.src="../html/luxuryItem.html";
+                        categoryChoose1();
                         break;
                     case "b" :
-                        iframe.src='../html/nftItem.html';
+                        categoryChoose2();
                         break;
                 }
 
-                // function listChoose(){
-                //     if(iframe.src="../html/luxuryItem.html"){
-                //         alert(1);
-                //         luxury.color='#8566FF';
-                //         luxury.fontWeight='600';
-                //     } else if(iframe.src="../html/nftItem.html") {
-                //         nft.color = '#8566FF';
-                //         nft.fontWeight = '600';
-                //     }
-                // }
 
-            </script>
-
+                function categoryChange(){
+                if(titleText = "💜고가 물품💜"){
+                    categoryChoose.style.fontWeight="bold";
+                    categoryChoose.style.color="#8566FF"
+                } else{
+                    categoryChoose2.style.fontWeight="bold";
+                    categoryChoose2.style.color="#8566FF"
+                }
+                window.onload=categoryChange();
+            }
+           
+            </script> -->
+                
+        
+                <!--스크롤 시 목록 계속 로딩되게...-->
+                <div class="cardBundle">
+                    <div class="itemCard">
+                        <!-- <a href="">구매하기</button> -->
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <!-- <a href="">구매하기</button> -->
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <!-- <a href="">구매하기</button> -->
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <!-- <a href="">구매하기</button> -->
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                    <div class="itemCard">
+                        <img src="../picture/metamong.png">
+                        <div class="itemText">
+                            <div class="itemType"><span>Luxury</span> / <span>가방</span></div>
+                            <span class="itemTitle">긴 제목 말줄임표 되나요? 네 됩니다</span>
+                            <span class="itemPrice">9,000원</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="pageWrap">
+                    <ul class="page">
+                        <li><a href="/">1</a></li>
+                        <li><a href="/">2</a></li>
+                        <li><a href="/">3</a></li>
+                        <li><a href="/">4</a></li>
+                        <li><a href="/">5</a></li>
+                        <li><a href="/">6</a></li>
+                        <li><a href="/">7</a></li>
+                        <li><a href="/">8</a></li>
+                        <li><a href="/">9</a></li>
+                        <li><a href="/">10</a></li>
+                        <li><a href="/">Next</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!--하단 footer-->
@@ -141,7 +321,7 @@
                 </div>
                 <!--footer 오른편-->
                 <div class="footerRight">
-                    <a href="/">어플 다운받기</a>
+                    <a href="../html/app.html">어플 다운받기</a>
                 </div>
             </div>
         </footer>
