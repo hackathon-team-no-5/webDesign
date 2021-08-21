@@ -27,11 +27,12 @@ body{
 
 .bodyWrap{
     font-family: 'myfont';
+    width: 480px;
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 5.5%;
     padding: 30px 30px 10px 30px;
 
-    width: 480px;
+
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 6.5fr;
@@ -41,6 +42,13 @@ body{
     background-color: white;
     border-radius: 30px;
     box-shadow : 0px 7px 10px 0px #d8d3da;
+}
+
+@media screen and (max-height: 730px) {
+    .bodyWrap{
+        margin-top: 0px;
+    }
+    
 }
 
 /*로고*/

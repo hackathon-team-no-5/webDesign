@@ -121,6 +121,7 @@ input[type=radio].categoryChoose {
 
 input[type=radio].categoryChoose:checked + label {
 	color: #8566FF;
+	font-weight: bold;
 }
 	
 .categoryChooseLabel{

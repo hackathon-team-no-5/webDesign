@@ -17,15 +17,19 @@ window.onload = function () {
 function whenExistCategory(category) {
     switch (category) {
         case "highQuality": // 고가 물품
-            document.getElementById("highQuality").checked = true
+            document.getElementById("highQuality").checked = true;
             break;
         case "nft": // NFT
-            document.getElementById("nft").checked = true
+            document.getElementById("nft").checked = true;
+            document.getElementsByClassName("textBundleTitle")[0].innerHTML="💜NFT💜";
             break;
         case "byArea": // 지역별
-            document.getElementById("byArea").checked = true
+            document.getElementById("byArea").checked = true;
+            document.getElementsByClassName("textBundleTitle")[0].innerHTML="💜지역별💜"
             break;
         default:
             break;
     }
 }
+
+//카테고리 선택 시 밑에 텍스트 바뀌게 구현....ㅠㅠㅠㅠ
