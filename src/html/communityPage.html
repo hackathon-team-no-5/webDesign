@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/communityPage.css">
     <link rel="stylesheet" href="../css/topBar.css">
     <link rel="stylesheet" href="../css/pageNum.css">
+    <script type="text/JavaScript" src="../js/communityPage.js"></script>
     <title>WebDesign</title>
 </head>
 <body>
@@ -49,72 +50,27 @@
             </div>
 
             <div class="bodyMain">
-                <div class="category">
-                    <label>카테고리</label>
-                    <ul>
-                        <li><a href="">최신글</a></li>
-                        <li><a href="">질문</a></li>
-                        <li><a href="">일상</a></li>
-                        <li><a href="">기타</a></li>
-                    </ul>
+                <div class="categoryWrap">
+                    <div class="category">
+                        <label>카테고리</label>
+
+                        <input type="radio" class="categoryChoose" id="newest" name="category" value="newest" onchange="changedCategory('newest')" checked/>
+                        <label class="categoryChooseLabel" for="newest">👉최신글</label>
+                        <input type="radio" class="categoryChoose" id="question" name="category" value="question" onchange="changedCategory('question')"/>
+                        <label class="categoryChooseLabel" for="question">👉질문</label>
+                        <input type="radio" class="categoryChoose" id="dayLife" name="category" value="dayLife" onchange="changedCategory('dayLife')"/>
+                        <label class="categoryChooseLabel" for="dayLife">👉일상</label>
+                        <input type="radio" class="categoryChoose" id="etc" name="category" value="etc" onchange="changedCategory('etc')"/>
+                        <label class="categoryChooseLabel" for="etc">👉기타</label>
+                    </div>
                 </div>
-                <!--게시글 카드-->
-                <!-- <div class="contents">
-                    <div class="contentsTitleWrap">
-                        <div class="contentsWrapTitle">최신 글</div>
-                        <div class="contentsWrapTitleDetail">가장 최근에 올라온 글을 확인해보세요!</div>
-                    </div>
-                    <div class="contentsCard">
-                        <div class="contentsTitle">뿌링클 먹었당</div>
-                        <div class="contentsArticle">방금 점심으로 뿌링클 먹었어요! 쏘 딜리샷스,,,</div>
-                        <div class="contentsBottom">
-                            <div class="contentsCommentWrap">
-                                <img src="../picture/chat-comment-oval-speech-bubble-with-text-lines.png">
-                                <div class="contentsComment">댓글</div><div class="contentsCommentNum">23</div>
-                            </div>
-                            <div class="contentsWriter">
-                                <div class="writerTitle">작성자</div>
-                                <div class="writerName">뿌링클 조지부시
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contentsCard">
-                        <div class="contentsTitle">프라다 어떤 가방이 예쁜가요?</div>
-                        <div class="contentsArticle">호보백이 사고싶네요 ㅠㅠ 근데 다른 숄더백도 예뻐보이고... 뭘 추천하시나요?</div>
-                        <div class="contentsBottom">
-                            <div class="contentsCommentWrap">
-                                <img src="../picture/chat-comment-oval-speech-bubble-with-text-lines.png">
-                                <div class="contentsComment">댓글</div><div class="contentsCommentNum">23</div>
-                            </div>
-                            <div class="contentsWriter">
-                                <div class="writerTitle">작성자</div>
-                                <div class="writerName">명품 알랍</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contentsCard">
-                        <div class="contentsTitle">해커톤 준비 너무 힘드네요</div>
-                        <div class="contentsArticle">해커톤 5조 블록체인이 채고 다 뿌수자</div>
-                        <div class="contentsBottom">
-                            <div class="contentsCommentWrap">
-                                <img src="../picture/chat-comment-oval-speech-bubble-with-text-lines.png">
-                                <div class="contentsComment">댓글</div><div class="contentsCommentNum">23</div>
-                            </div>
-                            <div class="contentsWriter">
-                                <div class="writerTitle">작성자</div>
-                                <div class="writerName">핀테크</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
 
                 <!--게시판-->
                 <div class="communityBoard">
                     <!--게시판 타이틀-->
                     <div class="communityTitle">
-                        <span>🔥최신글🔥</span>
-                        <span>가장 최근에 올라온 글을 확인해보세요!</span>
+                        <span class="communityTitleSpan">🔥최신글🔥</span>
+                        <span class="communityTitleDetail">가장 최근에 올라온 글을 확인해보세요!</span>
                     </div>
                     <!--게시판 본문-->
                     <table>

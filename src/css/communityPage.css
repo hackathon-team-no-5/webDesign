@@ -102,25 +102,32 @@
 	height: 205px;
 }
 
-.category>label{
+.category>label:nth-child(1){
+	float:left;
     font-size: 20px;
     font-weight: 600;
-	border-bottom: 1px solid #aaa;
+	padding: 0 0 20px 38px;
 }
 
-.category>ul{
-    margin-top: 30px;
+.categoryChooseLabel{
+	font-size: 18px;
+	float:left;
+	padding: 0 0 15px 31px;
+	letter-spacing: 0.2em;
 }
 
-.category>ul>li{
-    margin: 20px 0 20px 0;
-    font-size:18px;
-    letter-spacing: 0.3em;
+/* 카테고리 라디오 버튼의 기본 둥근 아이콘을 제거 */
+input[type=radio].categoryChoose {
+	appearance: none;
 }
 
-.category>ul>li>a:hover{
+input[type=radio].categoryChoose:checked + label {
 	color: #8566FF;
 	font-weight: bold;
+}
+	
+.categoryChooseLabel{
+	cursor: pointer;
 }
 
 
