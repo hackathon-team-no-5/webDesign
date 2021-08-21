@@ -72,7 +72,7 @@
 } */
 
 
-.itemCard>img{
+.itemCard>a>img{
 	width : 200px;
 	height: 200px;
 	border-radius: 7px 7px 0 0;

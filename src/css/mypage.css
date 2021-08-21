@@ -44,6 +44,7 @@ body, html{
     z-index: 3;
     margin-top: 180px;
     font-family: myfont;
+    font-style: italic;
 }
 
 .mypageWrap{
