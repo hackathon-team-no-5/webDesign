@@ -90,7 +90,7 @@
                                     <span>제목 : </span><span>제목을 길게 작성해볼겁니다 어디에서 잘리나 한 번 봅시다</span><br><br>
                                     <span>구매날짜 : </span><span>2021-08-20</span><span>판매자 : </span><span>핀테크</span>
                                 </div>
-                                <button onclick="alert('구매 확정되었습니다.')">구매 확정</button>
+                                <button onclick="alert('구매 확정되었습니다.'); itemHide1()">구매 확정</button>
                             </div>
                             <div class="myBuyConfirmItem">
                                 <img src="../picture/nft.jpg">
@@ -99,7 +99,7 @@
                                     <br><br>
                                     <span>구매날짜 : </span><span>2021-08-20</span><span>판매자 : </span><span>핀테크</span>
                                 </div>
-                                <button onclick="alert('구매 확정되었습니다.')">구매 확정</button>
+                                <button onclick="alert('구매 확정되었습니다.'); itemHide2()">구매 확정</button>
                             </div>
                             <div class="myBuyConfirmItem">
                                 <img src="../picture/metamong.png">
@@ -107,13 +107,22 @@
                                     <span>제목 : </span><span>제 메타몽 사주세요...</span><br><br>
                                     <span>구매날짜 : </span><span>2021-08-20</span><span>판매자 : </span><span>핀테크</span>
                                 </div>
-                                <button onclick="alert('구매 확정되었습니다.')">구매 확정</button>
+                                <button onclick="alert('구매 확정되었습니다.'); itemHide3();">구매 확정</button>
                             </div>
                         </div>
                         <div class="moreImg"><img src="../picture/more.png"></div>
                     </div>
                 </div>
 
+                <script>
+                    function itemHide1() {
+                        document.getElementsByClassName("myBuyConfirmItem")[0].style.display="none";}        
+                    
+                    function itemHide2() {
+                        document.getElementsByClassName("myBuyConfirmItem")[1].style.display="none";}        
+                    function itemHide3() {
+                        document.getElementsByClassName("myBuyConfirmItem")[2].style.display="none";}        
+                </script>
         
 
                 
