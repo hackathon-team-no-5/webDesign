@@ -74,11 +74,11 @@
                         
                     </div> --> <!--dropdown 시도...ㅠㅠ-->
                     <div class="category">
-                        <input type="radio" class="categoryChoose" id="highQuality" name="category" value="highQuality" checked/>
+                        <input type="radio" class="categoryChoose" id="highQuality" name="category" value="highQuality" onchange="changedCategory('highQuality')" checked/>
                         <label class="categoryChooseLabel" for="highQuality">👉고가 물품</label>
-                        <input type="radio" class="categoryChoose" id="nft" name="category" value="nft"/>
+                        <input type="radio" class="categoryChoose" id="nft" name="category" value="nft" onchange="changedCategory('nft')"/>
                         <label class="categoryChooseLabel" for="nft">👉NFT</label>
-                        <input type="radio" class="categoryChoose" id="byArea" name="category" value="byArea"/>
+                        <input type="radio" class="categoryChoose" id="byArea" name="category" value="byArea" onchange="changedCategory('byArea')"/>
                         <label class="categoryChooseLabel" for="byArea">👉지역별</label>
                     </div>
 
@@ -94,7 +94,7 @@
 
             <div class="ItemWrap">
                 <div class="textBundle">
-                    <span class="textBundleTitle">💜고가 물품💜</span>
+                    <span id="categoryTitle" class="textBundleTitle">💜고가 물품💜</span>
                     <span class="textBundleSubtitle">이 상품은 어떠신가요?</span>
                     <div class="luxuryTypeList">
                         <ul>

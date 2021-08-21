@@ -15,17 +15,32 @@ window.onload = function () {
  */
 
 function whenExistCategory(category) {
+    changedCategory(category)
     switch (category) {
         case "highQuality": // 고가 물품
             document.getElementById("highQuality").checked = true;
             break;
         case "nft": // NFT
             document.getElementById("nft").checked = true;
-            document.getElementsByClassName("textBundleTitle")[0].innerHTML="💜NFT💜";
             break;
         case "byArea": // 지역별
             document.getElementById("byArea").checked = true;
-            document.getElementsByClassName("textBundleTitle")[0].innerHTML="💜지역별💜"
+            break;
+        default:
+            break;
+    }
+}
+
+function changedCategory(category) {
+    switch (category) {
+        case "highQuality":
+            document.getElementById("categoryTitle").innerHTML="💜고가 물품💜";
+            break;
+        case "nft":
+            document.getElementById("categoryTitle").innerHTML="💜NFT💜";
+            break;
+        case "byArea":
+            document.getElementById("categoryTitle").innerHTML="💜지역별💜";
             break;
         default:
             break;
